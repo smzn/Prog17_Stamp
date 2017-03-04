@@ -13,14 +13,15 @@ import java.net.URL;
  */
 
 public class AsyncHttp extends AsyncTask<String, Integer, Boolean> {
-    double pointX, pointY, elapse;
+    int pointX, pointY;
+    double elapse;
     int movie_id;
 
     public AsyncHttp(double pointX, double pointY, double elapse) {
-        this.pointX = pointX;
-        this.pointY = pointY;
+        this.pointX = (int)pointX;
+        this.pointY = (int)pointY;
         this.elapse = elapse;
-        movie_id = 7;
+        movie_id = 10;
     }
 
     HttpURLConnection urlConnection = null; //HTTPコネクション管理用
